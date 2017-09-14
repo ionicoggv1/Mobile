@@ -4,4 +4,9 @@ este es un ejemplo de prueba cesar
 
 soy manuel
 
+<<<<<<< HEAD
 comer
+=======
+
+beber
+>>>>>>> c2d29c8bb6bc5f899ac6c23fb511520f8284d557
