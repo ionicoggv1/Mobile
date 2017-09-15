@@ -1,5 +1,9 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+<!--
+ESTE HTML AGRUPA LOS TABS PRINCIPALES DE LA APPLICACION.
+CADA CHILD DE TAB ES TENDRA SU PROPIO HISTORIAL DE NAVEGACION LAS CUALES ENTRAN Y SALEN DE LAS VISTAS.
+-->
+<ion-tabs selectedIndex="2">
+  <ion-tab [root]="tab1Root" tabTitle="Notifications" tabIcon="notifications"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Expeditions" tabIcon="chatboxes"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Settings" tabIcon="person"></ion-tab>
 </ion-tabs>
