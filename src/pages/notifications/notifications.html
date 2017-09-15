@@ -1,18 +1,54 @@
-<!--
-  Generated template for the NotificationsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
+<!-- ESTE TEMPLATE ES EL INICIO DE LA APLICACION Y DONDE SE ENCONTRARAN LAS NOTIFICACIONES -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Notifications</ion-title>
+    <ion-title>
+      <img src="../assets/img/APPIAtransA.gif" style="margin-top:10px;" width="107" height='24'>
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-refresher (ionRefresh)="doRefresh()"> </ion-refresher>
+  <div *ngIf="online == true">
+    <div *ngIf="notistatus == true">
+      <ion-list>
+        <ion-item class="item-text-wrap" ng-repeat="item in notifications" (click) ="openExpedform(item.idInternoExpedicion)">
+          <h2> The <strong>{{item.NumeroDeExpedicion}}</strong>'s expedition was <font color="{{item.statusAng}}">{{item.messages}}</font></h2>
+          <p>
+            <small>
+              <!-- {{item.statusDateAng| relativeDate}} -->
+              <a href="#" class="item-icon-right icon" (click)="ActionSheet(item) ; $event.stopPropagation();">
+                <i class="icon ion-more dark"></i>
+              </a>
+            </small>
+          </p>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="notistatus == false">
+        <p class="msjS">When receive an expedition's notification, you'll see the details here.</p>
+        <!-- TENGO QUE APUNTAR A EXPEDITIONES PARA QUE EMPIECE LA APP -->
+        <!-- <p class="routeS"><a href="#/tab/expeditions" target="_blank">Get Started</a></p> -->
+        <!-- <p>And so do <code>Date</code> objects: <strong>{{ dateObject | relativeDate }}</strong></p> -->
+        <!-- TENGO QUE CAMBIAR LA IMAGEN PORQUE ESTOY UTILIZANDO UNA DE INTERNET -->
+        <div style="width: 80%; margin: 0 auto;">
+            <img src="../assets/img/imanotif.jpg" style="width:100%; position: relative; top: 110px;">
+        </div>
+    </div>
+  </div>
+  <div *ngIf="online == false">
+    <h3 align="center">Uh oh. Internet trouble.</h3>
+    <p align="center">
+      Check
+      <a href="https://support.apple.com/es-es/HT201415" target="_blank">
+        Support Apple
+      </a>
+      for outage issues if this problem persists.
+    </p>
+    <!-- TENGO QUE CAMBIAR LA IMAGEN PORQUE NO ES SERIA Y ESTOY UTILIZADA EN INTERNET (NO ENTIENDO SI NO HAY INTERNET COMO LA COGE) -->
+    <p>
+      <img src="http://vignette3.wikia.nocookie.net/pixar/images/6/6b/Inside-Out-bigcry-Sadness.jpg/revision/latest/scale-to-width-down/424?cb=20150720224022" alt="conection off" style="width:100%">
+    </p>
+  </div>
 </ion-content>
