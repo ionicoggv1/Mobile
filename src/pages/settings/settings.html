@@ -22,20 +22,25 @@
     </div>
     <h2 style="text-align: center;"> Vgg Aplicaciones</h2> 
 
-    <div class="card">
-      <div class="item item-text-wrap">
-      	<p>
-          <h2>Our Address</h2>
-          <p>Calle 90 No. 12-28, Piso 2 Oficina 67</p>
-          <p>110221, Bogotá, COLOMBIA</p>
-          <p><i class="icon ion-android-call" href="tel:+573103192313"></i>: +57 310 319 2313</p>
-          <p><i class="icon ion-android-mail" href="mailto:marcila@vggaplicaciones.net"></i>: marcila@vggaplicaciones.net</p>
-        </p>
-      </div>
-      <div class="button-bar">
-        <a class="button icon-left ion-android-call button-positive" href="tel:+573103192313" ><span>Call</span></a>
-        <a class="button icon-left ion-android-mail button-balanced" href="mailto:marcila@vggaplicaciones.net" ><span>Email</span></a>
-      </div>
+    <ion-card>
+    	<ion-card-header>
+    		<h2>Our Address</h2>
+  		</ion-card-header>
+  		<ion-card-content>
+  			<!-- <ion-item text-wrap> -->
+  			<div>
+          
+          		<p>Calle 90 No. 12-28, Piso 2 Oficina 67</p>
+          		<p>110221, Bogotá, COLOMBIA</p>
+          		<p><ion-icon name="call" href="tel:+573103192313"></ion-icon> : +57 310 319 2313</p>
+          		<p><ion-icon name="mail" href="mailto:marcila@vggaplicaciones.net"></ion-icon> : marcila@vggaplicaciones.net</p>
+         	<!-- </ion-item> -->
+         	</div>
+  		</ion-card-content>
+	</ion-card>
+	<div class = "button-bar">
+      	<button ion-button color = "primary"  small icon-left href="tel:+573103192313"> <ion-icon name="call"></ion-icon> Call </button>
+      	<button ion-button color = "secondary" small icon-left href="mailto:marcila@vggaplicaciones.net" > <ion-icon name="mail"></ion-icon> Email </button>
     </div>
 
 </ion-content>
